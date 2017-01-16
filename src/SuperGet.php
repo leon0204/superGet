@@ -1,4 +1,13 @@
 <?php 
 
+namespace SuperGet;
 
-echo 'u get my get';
+class SuperGet
+{
+
+   public function info ()
+   {
+      echo 'u get info ';
+   }
+
+}
