@@ -5,7 +5,7 @@ namespace SuperGet;
 class SuperGet
 {
 
-   public function info ()
+   public static function info ()
    {
       echo 'u get info ';
    }
