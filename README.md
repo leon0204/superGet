@@ -2,12 +2,12 @@
 
 ## For get everthing.
 
-![icon](https://packagist.org/bundles/packagistweb/img/logo-small.png?v=1483361432)
+![icon](https://cdn0.iconfinder.com/data/icons/black-icon-social-media/256/099280-blinklist-logo.png)
 
 #Via Composer
 
 - bash
-- composer require leon0204/superget
+- composer require leon0204/superget dev-master (recommand)
 
 - php
 - $superget = new SuperGet\SuperGet;
@@ -27,4 +27,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.1.1] - 2017-1-17
 ### Added
-- ADD snapshot @leon0204
+- ADD curl -snapshot @leon0204
