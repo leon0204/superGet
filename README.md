@@ -28,3 +28,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.1.1] - 2017-1-17
 ### Added
 - ADD curl -snapshot @leon0204
+
+## [0.1.2] - 2017-1-18
+### Added
+- ADD email send - email @leon0204
