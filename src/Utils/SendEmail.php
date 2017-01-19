@@ -27,7 +27,7 @@ class SendEmail
             $mail->setFrom($username, "leon0204yo");//设置邮件来源
 
             //标题
-            $mail->Subject = isset($subject)? $subject : "新年到了,想要脱单吗？快点进来看看yo";
+            $mail->Subject = empty($subject)? $subject : "新年到了,想要脱单吗？快点进来看看yo";
             //文字部分
             $mail->MsgHTML("正文");
             //设置html
