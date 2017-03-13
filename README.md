@@ -1,4 +1,4 @@
-# Superget
+# Superget 用Superget获取你想要的一切
 
 ## For get everthing.
 
