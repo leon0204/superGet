@@ -1,4 +1,4 @@
-# Superget 用Superget获取你想要的一切
+# Superget 用Superget获取你想要的
 
 ## For get everthing.
 
@@ -7,31 +7,31 @@
 # Via   `Composer`
 
 - bash
-- `composer` require `leon0204/superget` dev-master (recommand)
+- `composer` require `leon0204/superget` dev-master (推荐)
 
 - php
 - $superget = new SuperGet\SuperGet;
 
 
 
-# Change Log
+# 更新日志
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.1.0] - 2017-1-16
-### Added
+### 添加基础配置
 - INIT add base config@leon0204.
 - Model add base model.etc,Catch,Img,Article.@leon0204.
 
 ## [0.1.1] - 2017-1-17
-### Added
+### 添加快照
 - ADD curl -snapshot @leon0204
 
-## [0.1.2] - 2017-4-10
-### Added
-- ADD email send - email @leon0204
+## [0.1.2] - 2017-1-29
+### 添加邮件发送
+- ADD `email` send - `email` @leon0204
 
 - `composer` require `phpmailer/phpmailer`  `dev-master` 
 - 使用案例
