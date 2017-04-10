@@ -10,7 +10,7 @@ namespace SuperGet\Utils;
  */
 class SendEmail
 {
-    public static function send($username,$password,$subject,$sendTo)
+    public static function send($params)
     {
         $mail = new \PHPMailer(true); // notice the \  you have to use root namespace here
         try {
@@ -19,38 +19,43 @@ class SendEmail
             $mail->CharSet = "utf-8"; // set charset to utf8
             $mail->SMTPAuth = true;  // use smpt auth
             $mail->SMTPSecure = "tls"; // or ssl
-            $mail->Host = "smtp.qq.com";
+            $mail->Host =  $params['host'];
 
-            $mail->Port = 25; // most likely something different for you. This is the mailtrap.io port i use for testing.
-            $mail->Username = $username;
-            $mail->Password = $password;
-            $mail->setFrom($username, "leon0204yo");//设置邮件来源
+            $mail->Port = $params['port'];
+            $mail->Username = $params['username'];
+            $mail->Password = $params['password'];
+            $mail->setFrom($params['username'], $params['sendNick']);//设置邮件来源
 
             //标题
-            $mail->Subject = empty($subject)? $subject : "新年到了,想要脱单吗？快点进来看看yo";
+            $mail->Subject = empty($params['subject'])?  "你好，这是一封测试的邮件" : $params['subject'];
             //文字部分
-            $mail->MsgHTML("正文");
+//            $mail->MsgHTML("正文：你好啊");
             //设置html
             $mail->ishtml(false);
 
             //添加图片
-            $mail->AddEmbeddedImage("/var/www/resource/little.jpg", "my-attach", "粉红女郎"); //设置邮件中的图片
-            $mail->Body =
-                '
-              <a href="http://www.wuxixindai.com"><font size="10px" color="red" >海量视频在线观看！点击就送会员</font> <br/><br/> </a>  
-              <a href="http://www.wuxixindai.com"> <img alt="helloweba"   src="cid:my-attach"></a> 
-                '; //邮件主体内容
+            if (isset($params['picPath']) &&!empty($params['picPath'])) $mail->AddEmbeddedImage($params['picPath'], "my-attach",$params['picName']); //设置邮件中的图片
 
+            //邮件主体内容
+            if (isset($params['text']) &&!empty($params['text'])){
+                $mail->Body =$params['text'];
+            }else{
+                $mail->Body =
+                    '
+              <a href="http://www.leon0204.com"><font size="10px" color="blue" >你好！</font> <br/><br/> </a>  
+              <a href="http://www.leon0204.com"> <img alt="helloweba"   src="cid:my-attach"></a> 
+                ';
+            }
             //添加附件
-            $mail->addattachment('/var/www/resource/baijie.txt', '福利你懂得！'); // (path,show-name)
+            if (isset($params['filePath']) &&!empty($params['filePath'])) $mail->addattachment($params['filePath'], $params['fileName']); // (path,show-name)
 
-            $mail->addAddress($sendTo,"qqisgood");
+            $mail->addAddress($params['sendTo'],$params['sendToNick']);
             $mail->send();
         } catch (phpmailerException $e) {
             dd($e);
         } catch (Exception $e) {
             dd($e);
         }
-        die('send success');
+        echo('send success');
     }
 }
