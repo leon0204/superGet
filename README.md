@@ -29,12 +29,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - ADD curl -snapshot @leon0204
 
-## [0.1.2] - 2017-1-18
+## [0.1.2] - 2017-4-10
 ### Added
 - ADD email send - email @leon0204
 
--   composer require leon0204/superget dev-master 
--   使用案例
+- composer require leon0204/superget dev-master 
+- 使用案例
 
 ```      
 use SuperGet\Utils as Utils;
