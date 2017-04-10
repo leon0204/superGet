@@ -4,10 +4,10 @@
 
 ![icon](https://cdn0.iconfinder.com/data/icons/black-icon-social-media/256/099280-blinklist-logo.png)
 
-#Via Composer
+# Via   `Composer`
 
 - bash
-- composer require leon0204/superget dev-master (recommand)
+- `composer` require `leon0204/superget` dev-master (recommand)
 
 - php
 - $superget = new SuperGet\SuperGet;
@@ -33,17 +33,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - ADD email send - email @leon0204
 
-- composer require leon0204/superget dev-master 
+- `composer` require `phpmailer/phpmailer`  `dev-master` 
 - 使用案例
 
 ```      
-use SuperGet\Utils as Utils;
+use `SuperGet\Utils`  as `Utils`;
 
 //必填参数
 $params['username'] = '邮箱号';
 $params['password'] = '设置SMTP服务密码，注意不是邮箱密码';
-$params['port'] = 25; 
-$params['host'] = 'smtp.qq.com';
+$params['port'] = 25;  //设置端口号
+$params['host'] = 'smtp.qq.com';  //邮件服务器
 
 $params['subject'] = '邮件标题';
 $params['text'] = '邮件正文';//可以设置成带css的html内容
