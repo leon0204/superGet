@@ -32,20 +32,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.1.2] - 2017-1-18
 ### Added
 - ADD email send - email @leon0204
-发送邮件使用方法：
--   composer require leon0204/superget dev-master (recommand)
--   use SuperGet\Utils as Utils;
 
-``` //必填参数
-         $params['username'] = '3320376695@qq.com';
-         $params['password'] = 'xnngnbifuiiicjbb';
-         $params['port'] = 25;
+-   composer require leon0204/superget dev-master 
+-   
+
+```      
+         use SuperGet\Utils as Utils;
+         
+         //必填参数
+         $params['username'] = '邮箱号';
+         $params['password'] = '设置SMTP服务密码，注意不是邮箱密码';
+         $params['port'] = 25; 
          $params['host'] = 'smtp.qq.com';
 
          $params['subject'] = '邮件标题';
          $params['text'] = '邮件正文';//可以设置成带css的html内容
 
-         $params['sendTo'] = 'siwei@njxzwh.com';
+         $params['sendTo'] = '收件邮箱';
          $params['sendNick'] = '发件人昵称';
          $params['sendToNick'] = '收件人昵称';
 
