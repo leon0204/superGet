@@ -34,31 +34,32 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - ADD email send - email @leon0204
 
 -   composer require leon0204/superget dev-master 
--   
+-   使用案例
 
 ```      
-         use SuperGet\Utils as Utils;
-         
-         //必填参数
-         $params['username'] = '邮箱号';
-         $params['password'] = '设置SMTP服务密码，注意不是邮箱密码';
-         $params['port'] = 25; 
-         $params['host'] = 'smtp.qq.com';
+use SuperGet\Utils as Utils;
 
-         $params['subject'] = '邮件标题';
-         $params['text'] = '邮件正文';//可以设置成带css的html内容
+//必填参数
+$params['username'] = '邮箱号';
+$params['password'] = '设置SMTP服务密码，注意不是邮箱密码';
+$params['port'] = 25; 
+$params['host'] = 'smtp.qq.com';
 
-         $params['sendTo'] = '收件邮箱';
-         $params['sendNick'] = '发件人昵称';
-         $params['sendToNick'] = '收件人昵称';
+$params['subject'] = '邮件标题';
+$params['text'] = '邮件正文';//可以设置成带css的html内容
 
-
-
-        //选填参数
-         $params['filePath'] = '';//附件路径
-         $params['fileName'] = '';//附件名称
-         $params['picPath'] = '';//图片路径
-         $params['picName'] = '';//图片名称
+$params['sendTo'] = '收件邮箱';
+$params['sendNick'] = '发件人昵称';
+$params['sendToNick'] = '收件人昵称';
 
 
-        $send  =  Utils\SendEmail::send($params);```
+
+//选填参数
+$params['filePath'] = '';//附件路径
+$params['fileName'] = '';//附件名称
+$params['picPath'] = '';//图片路径
+$params['picName'] = '';//图片名称
+
+
+$send  =  Utils\SendEmail::send($params);
+```
