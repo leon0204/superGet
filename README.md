@@ -1,4 +1,4 @@
-# Superget 用Superget获取你想要的
+# Superget 轻量级工具
 
 ## For get everthing.
 
